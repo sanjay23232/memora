@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#6c45e8"><title>A memory made for you — MEMORA</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="memory-page">
+  <main class="shared-wrap">
+    <div class="shared-card">
+      <div class="preview-confetti">✦　✧　✦</div>
+      <div class="shared-heart">♡</div>
+      <p class="preview-kicker" id="sharedOccasion">A LITTLE MOMENT</p>
+      <h1>For <span id="sharedName">Someone Special</span></h1>
+      <p class="shared-message" id="sharedMessage">You are loved more than words can say.</p>
+      <div class="preview-sign">A LITTLE SURPRISE FROM MEMORA ♡</div>
+    </div>
+    <p class="shared-footer">Created with care at <b>MEMORA</b></p>
+  </main>
+  <script>
+    const q = new URLSearchParams(location.search);
+    const safe = (id, value) => document.getElementById(id).textContent = value;
+    safe("sharedName", q.get("to") || "Someone Special");
+    safe("sharedOccasion", (q.get("occasion") || "A LITTLE MOMENT").toUpperCase());
+    safe("sharedMessage", q.get("message") || "You are loved more than words can say.");
+  </script>
+</body>
+</html>

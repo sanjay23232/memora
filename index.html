@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#6c45e8">
+  <title>MEMORA — Make moments unforgettable</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#"><span class="brand-mark">M</span> MEMORA<span class="dot">.</span></a>
+    <a class="nav-cta" href="#create">Create a memory <span>↗</span></a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow">LITTLE MOMENTS. BIG FEELINGS.</span>
+        <h1>Turn your memories into <span>something magical.</span></h1>
+        <p>Personalised digital memory pages for birthdays, best friends and all the people who make life special.</p>
+        <a class="primary-btn" href="#create">Create your memory <span>→</span></a>
+        <div class="trust"><span>✦</span> Made personally, just for your person</div>
+      </div>
+      <div class="hero-art">
+        <div class="spark s1">✦</div><div class="spark s2">✧</div>
+        <div class="memory-card">
+          <div class="card-top"><span> A LITTLE REMINDER </span><span>♡</span></div>
+          <div class="photo-placeholder"><span>📸</span><small>YOUR FAVOURITE MOMENT</small></div>
+          <div class="card-note">Some people make<br>ordinary days <em>unforgettable.</em></div>
+          <div class="card-footer">MADE WITH LOVE · MEMORA</div>
+        </div>
+        <div class="bubble bubble-one">Your story, your way ✨</div>
+        <div class="bubble bubble-two">♡ 100% personal</div>
+      </div>
+    </section>
+
+    <section class="how section">
+      <div class="section-heading"><span class="eyebrow">THOUGHTFUL, NOT COMPLICATED</span><h2>A gift that feels like <span>you.</span></h2></div>
+      <div class="steps">
+        <article><b>01</b><div class="step-icon">✍️</div><h3>Tell us the story</h3><p>Share a name, occasion and the message you want them to remember.</p></article>
+        <article><b>02</b><div class="step-icon">🎨</div><h3>We make it personal</h3><p>We turn your details into a colourful digital memory page.</p></article>
+        <article><b>03</b><div class="step-icon">💌</div><h3>Share the surprise</h3><p>Get a link and QR code to send or print on a card.</p></article>
+      </div>
+    </section>
+
+    <section class="creator section" id="create">
+      <div class="section-heading"><span class="eyebrow">LET'S MAKE A MOMENT</span><h2>Create a <span>demo memory</span></h2><p class="sub">Try the sample builder. Your details stay in this browser until you choose to send an order.</p></div>
+      <div class="builder">
+        <form id="memoryForm" class="form-panel">
+          <label for="person">Who is this memory for?</label>
+          <input id="person" maxlength="35" placeholder="e.g. Ananya" required>
+          <label for="occasion">What's the occasion?</label>
+          <select id="occasion">
+            <option>Birthday</option><option>Best Friends</option><option>Anniversary</option><option>Thank You</option><option>Just Because</option>
+          </select>
+          <label for="message">Your special message</label>
+          <textarea id="message" maxlength="240" rows="4" placeholder="Write something from the heart..." required></textarea>
+          <label for="photo">Add a favourite photo (optional)</label>
+          <input id="photo" type="file" accept="image/*">
+          <p class="hint">Demo note: the photo is previewed on this device. For a shareable customer order, send the original photo to us on WhatsApp.</p>
+          <button class="primary-btn full" type="submit">Update my preview <span>→</span></button>
+        </form>
+
+        <div class="preview-panel">
+          <div class="preview-label">LIVE PREVIEW <span class="live-dot"></span></div>
+          <div class="preview-card" id="previewCard">
+            <div class="preview-confetti">✦　✧　✦</div>
+            <div class="preview-photo" id="previewPhoto"><span>💜</span></div>
+            <p class="preview-kicker" id="previewOccasion">A LITTLE BIRTHDAY MAGIC</p>
+            <h3>For <span id="previewName">Someone Special</span></h3>
+            <p class="preview-message" id="previewMessage">You make the world brighter just by being in it. Here's a little reminder that you are loved!</p>
+            <div class="preview-sign">MADE WITH ♡ BY MEMORA</div>
+          </div>
+          <div class="preview-actions">
+            <button id="makeLink" class="secondary-btn" type="button">Generate share link + QR</button>
+            <div id="qrArea" class="qr-area" hidden>
+              <div id="qrcode"></div>
+              <p id="linkText"></p>
+              <button id="copyLink" class="text-btn" type="button">Copy link</button>
+            </div>
+            <a id="whatsappBtn" class="whatsapp-btn" href="#" target="_blank" rel="noopener">Order on WhatsApp ↗</a>
+            <p class="hint">WhatsApp number is a demo placeholder. Add your number in <b>script.js</b> before launch.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="price-strip">
+      <div><span class="eyebrow">INTRODUCTORY OFFER</span><h2>Personal memories from <span>₹49</span></h2><p>Demo pricing only. Confirm your final price and delivery time before taking orders.</p></div>
+      <a class="primary-btn" href="#create">Try it free <span>→</span></a>
+    </section>
+  </main>
+
+  <footer><a class="brand" href="#"><span class="brand-mark">M</span> MEMORA<span class="dot">.</span></a><p>Made for the moments that matter. © <span id="year"></span> MEMORA</p><a href="https://wa.me/" target="_blank" rel="noopener">WhatsApp us</a></footer>
+  <script src="script.js"></script>
+</body>
+</html>
