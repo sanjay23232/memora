@@ -55,8 +55,14 @@ $("whatsappBtn").addEventListener("click", (e) => {
     alert("Setup needed: open script.js and replace 91XXXXXXXXXX with your WhatsApp number, including country code.");
     return;
   }
-  const text = `Hi MEMORA! I want to order a personalised memory page.\\nFor: ${person.value || "Not entered"}\\nOccasion: ${occasion.value}\\nMessage: ${message.value}\\nPhoto: ${photo.files[0] ? "I will send it in this chat" : "No photo"}\\nPlease share the next steps and final price.`;
-  $("whatsappBtn").href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
+  const text = `Hi MEMORA! I want to order a personalised memory page.
+
+For: ${person.value || "Not entered"}
+Occasion: ${occasion.value || "Not entered"}
+Message: ${message.value || "Not entered"}
+Photo: I will send it in this chat.
+
+Please share the next steps and final price.`; $("whatsappBtn").href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
 });
 $("year").textContent = new Date().getFullYear();
 updatePreview();
