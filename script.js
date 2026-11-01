@@ -1,5 +1,5 @@
 // MEMORA setup: replace this with your WhatsApp number including country code, no + or spaces.
-const WHATSAPP_NUMBER = "91XXXXXXXXXX";
+const WHATSAPP_NUMBER = "918074595781";
 
 const $ = (id) => document.getElementById(id);
 const form = $("memoryForm");
